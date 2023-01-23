@@ -9,9 +9,6 @@ mapa = {
     4: [20, 21, 22, 23, 24]
 }
 
-
-
-
 def json_read(path):
     with open(path, 'r', encoding='utf-8') as read_info:
         return json.load(read_info)
@@ -56,8 +53,8 @@ def main(page: ft.Page):
         row = ft.Row(alignment=ft.MainAxisAlignment.CENTER)
         for j in range(len(maps['0'])):
             zone = str(maps[str(i)][j])
-            # row.controls.append(create_container(ft.Text(value=zone, color=ft.colors.BLACK), data=zone, ink=True,
-            #                                      on_click=change_color))
+            row.controls.append(create_container(ft.Text(value=zone, color=ft.colors.BLACK), data=zone, ink=True,
+                                                 on_click=change_color))
             # row.controls.append(create_container(ft.Image(src=ft.colors.WHITE, fit=ft.ImageFit.FILL, border_radius=10),
             #                                      padding=2, border_radius=10), data=zone, ink=True)
         page.add(row)
