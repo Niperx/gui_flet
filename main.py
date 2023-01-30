@@ -35,6 +35,8 @@ def create_container(content, margin=10, padding=10, aligment=ft.alignment.cente
         on_click=on_click,
     )
 
+# ft.Text(size=15, value='')
+
 
 def main(page: ft.Page):
     def change_color(e):
